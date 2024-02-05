@@ -1,10 +1,9 @@
-import dash
-from dash import dcc, html
+from dash import Dash, dcc, html
 import plotly.graph_objects as go
 import polars as pl
 
 # Crear la aplicación Dash
-app = dash.Dash(__name__)
+app = Dash(__name__)
 
 # Crear datos de ejemplo
 data = pl.read_csv("plots.csv")
@@ -27,4 +26,4 @@ app.title = 'Video metadata plotting'
 
 # Iniciar la aplicación Dash
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=False)
