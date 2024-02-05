@@ -4,6 +4,7 @@ import polars as pl
 
 # Crear la aplicación Dash
 app = Dash(__name__)
+server=app.server
 
 # Crear datos de ejemplo
 data = pl.read_csv("plots.csv")
